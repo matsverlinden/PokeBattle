@@ -1,7 +1,5 @@
 <?php 
 require 'classFiles/pokemon.php';
-
-
  ?>
 <!DOCTYPE html>
 <html lang="en">

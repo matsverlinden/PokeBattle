@@ -7,6 +7,12 @@ class Resistance{
 		$this->energyType = $energyType;
 		$this->reducedDamage = $reducedDamage;
 	}
+		public function getType(){
+		return $this->energyType;
+	}
+	public function getReducedDamage(){
+		return $this->reducedDamage;
+	}
 }
 
  ?>

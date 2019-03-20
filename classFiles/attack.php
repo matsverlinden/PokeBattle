@@ -7,6 +7,20 @@ class Attack{
 		$this->name = $name;
 		$this->damage = $damage;
 	}
+	public function mutiplyDamage($multiplier){
+		$this->damage = $this->damage * $multiplier;
+	}
+
+	public function reduceDamage($reducedDamage){
+		$this->damage = $this->damage - $reducedDamage;
+	}
+	
+	public function getName(){
+		return $this->name;
+	}
+	public function getDamage(){
+		return $this->damage;
+	}
 }
 
  ?>

@@ -7,7 +7,13 @@ class Weakness{
 		$this->energyType = $energyType;
 		$this->multiplier = $multiplier;
 	}
-	
+
+	public function getType(){
+		return $this->energyType;
+	}
+	public function getMultiplier(){
+		return $this->multiplier;
+	}
 }
 
  ?>
