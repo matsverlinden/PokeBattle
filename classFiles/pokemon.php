@@ -4,13 +4,15 @@ class Pokemon{
 	public $energyType;
 	public $hitpoints;
 	public $health;
-	public $attack;
+	public $attacks;
 	public $weakness;
 	public $resistance;
 
-	public function __construct($name, $hitpoints, EnergyType $energyType, Weakness $weakness, Resistance $resistance){
+	public function __construct($name, $energyType, $hitpoints, $attacks, $weakness, $resistance){
 		$this->name = $name;
 		$this->hitpoints = $hitpoints;
+		$this->health = $hitpoints;
+		$this->attacks = $attacks;
 		$this->energyType = $energyType;
 		$this->weakness = $weakness;
 		$this->resistance = $resistance;
@@ -18,7 +20,7 @@ class Pokemon{
 
 	public function attackPokemon(Pokemon $targetPokemon){
 		
-		$energyType = $this->EnergyType->getName();
+		$energyType = $this->energyType->getName();
 		$weaknessEnergyType = $targetPokemon->getWeakness()->getType();
 		$multiplier = $targetPokemon->getWeakness()->getmultiplier();
 
@@ -31,6 +33,10 @@ class Pokemon{
 		if ($energyType == $resistanceEnergyType) {
 			$attack->reduceDamage($reducedDamage);
 		}
+
+	}
+		public function damage($damage){
+			$this->health = $this->health - $damage;
 	}
 
 	public function getName(){
@@ -45,8 +51,8 @@ class Pokemon{
 		public function getHealth(){
 		return $this->health;
 	}
-		public function getAttack(){
-		return $this->attack;
+		public function getAttacks(){
+		return $this->attacks;
 	}
 		public function getWeakness(){
 		return $this->weakness;
@@ -54,6 +60,7 @@ class Pokemon{
 		public function getResistance(){
 		return $this->resistance;
 	}
+
 }
 
  ?>
