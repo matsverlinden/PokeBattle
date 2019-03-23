@@ -18,8 +18,10 @@ class Pokemon{
 		$this->resistance = $resistance;
 	}
 
-	public function attackPokemon(Pokemon $targetPokemon){
+	public function attackPokemon(Pokemon $targetPokemon, Attack $attack){
 		
+		echo $this->name . ' heeft ' . $targetPokemon->name .' aangevallen met '. $attack->getName() . '!<br>';
+
 		$energyType = $this->energyType->getName();
 		$weaknessEnergyType = $targetPokemon->getWeakness()->getType();
 		$multiplier = $targetPokemon->getWeakness()->getmultiplier();
@@ -33,6 +35,11 @@ class Pokemon{
 		if ($energyType == $resistanceEnergyType) {
 			$attack->reduceDamage($reducedDamage);
 		}
+		$damage = $attack->getDamage();
+		$targetPokemon = damage($damage);
+
+		echo $targetPokemon->name . ' heeft na de aanval nog ' . $targetPokemon->health . '/' . $targetPokemon->hitpoints . ' HP over!';
+
 
 	}
 		public function damage($damage){

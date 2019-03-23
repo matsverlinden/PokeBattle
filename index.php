@@ -11,13 +11,6 @@ $pikachu = new Pikachu('Pikachu');
 $charmeleon = new Charmeleon('Charmeleon');
 
 
-// $charmeleon->attackPokemon($pikachu, $charmeleon->attacks);
-
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,9 +22,9 @@ $charmeleon = new Charmeleon('Charmeleon');
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
- <!--        <audio controls autoplay style="display: none; ">
+        <audio controls autoplay style="display: none; ">
             <source src="img/music.mp3" type="audio/mpeg">
-        </audio> -->
+        </audio>
         <h1 class="display-3 text-center text-white">Pokemon Battle</h1>
         <div class="container-fluid">
             <div class="row">
@@ -68,7 +61,7 @@ $charmeleon = new Charmeleon('Charmeleon');
                     <p>HP: <?php echo $pikachu->hitpoints ?></p>
                     <p>Weakness: <?php echo $pikachu->weakness->getType(); ?></p>
                     <p>Resistance: <?php echo $pikachu->resistance->getType(); ?></p>
-                    <hr>
+
                     <h3 class="text-center">Attacks:</h3>
                     <hr>
                     <p>Attack (1): <?php echo $pikachu->attacks['Pika Punch']->name; ?></p> 
