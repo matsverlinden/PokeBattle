@@ -6,10 +6,10 @@ require 'classFiles/attack.php';
 require 'classFiles/energyType.php';
 require 'classFiles/resistance.php';
 require 'classFiles/weakness.php';
+//Maak een nieuwe pikachu aan met zijn bijbehorende naam.
 $pikachu = new Pikachu('Pikachu');
 $charmeleon = new Charmeleon('Charmeleon');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -54,12 +54,11 @@ $charmeleon = new Charmeleon('Charmeleon');
                 </div>
                 <div class="col-sm-1"></div>
                 <div class="col-sm-2">
-                    <br><br>
                     <img class="img-fluid" src="img/pokemon2.png" alt="Charmeleon" width="460" height="345">
                 </div>
                 <div class="col-sm-2"></div>
                 <div class="col-sm-2">
-                    <br><br><br><br>
+                    <br><br>
                     <img class="img-fluid" src="img/pokemon1.png" alt="Pikachu" width="460" height="345">
                 </div>
                 <div class="col-sm-1"></div>

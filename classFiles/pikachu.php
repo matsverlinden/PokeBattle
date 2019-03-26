@@ -1,4 +1,5 @@
 <?php 
+//Hier maak je Pikachu aan met alle waardes die het nodig heeft en dat geef je door naar de class pokemon.
 class Pikachu extends Pokemon{
 	public function __construct($name){
 		$energyType = new EnergyType('Lightning');

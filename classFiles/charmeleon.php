@@ -1,4 +1,5 @@
 <?php 
+//Hier maak je Charmeleon aan met alle waardes die het nodig heeft en dat geef je door naar de class pokemon.
 class Charmeleon extends Pokemon{
 
 	public function __construct($name){
