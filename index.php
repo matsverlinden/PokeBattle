@@ -68,6 +68,8 @@ $charmeleon = new Charmeleon('Charmeleon');
                     <p>Attack (2): <?php echo $pikachu->attacks['Electric Ring']->name ?></p> 
                 </div>
             </div>
+            <p class="text-white"><?php $pikachu->attackPokemon($charmeleon, $pikachu->attacks['Electric Ring']); ?></p>
+            <p class="text-white"><?php $charmeleon->attackPokemon($pikachu, $charmeleon->attacks['Flare']); ?></p>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

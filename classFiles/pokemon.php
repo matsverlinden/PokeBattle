@@ -36,13 +36,13 @@ class Pokemon{
 			$attack->reduceDamage($reducedDamage);
 		}
 		$damage = $attack->getDamage();
-		$targetPokemon = damage($damage);
+		$targetPokemon->reduceHealth($damage);
 
 		echo $targetPokemon->name . ' heeft na de aanval nog ' . $targetPokemon->health . '/' . $targetPokemon->hitpoints . ' HP over!';
 
 
 	}
-		public function damage($damage){
+		public function reduceHealth($damage){
 			$this->health = $this->health - $damage;
 	}
 
