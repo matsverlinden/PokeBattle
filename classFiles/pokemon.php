@@ -32,6 +32,7 @@ class Pokemon{
 			//wanneer dit het geval is zal de attack meer damage doen door de multiplier.
 		if ($energyType == $weaknessEnergyType) {
 			$attack->multiplyDamage($multiplier);
+
 		}
 		//haal de resistance en de hoeveelheid damage op van de pokemon die word aangevallen.
 		$resistanceEnergyType = $targetPokemon->getResistance()->getType();
@@ -39,6 +40,7 @@ class Pokemon{
 			//als de energytype van de pokemon die aanvalt en resistance van de andere gelijk is dan moet er minder damage uitgedeeld worden met de attack.
 		if ($energyType == $resistanceEnergyType) {
 			$attack->reduceDamage($reducedDamage);
+
 		}
 
 		$damage = $attack->getDamage();
